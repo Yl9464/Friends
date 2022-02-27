@@ -16,7 +16,7 @@ const Mainpage = () => {
         fetchFriend()
     }, []);
 
-    const nameFilter= (friend) => friend.trait.toLowerCase().includes(name.toLowerCase())
+    const nameFilter= (friend) => friend.name.toLowerCase().includes(name.toLowerCase())
     return (
         <div className='MainPage'>
             <h1>Friends</h1>
