@@ -5,9 +5,14 @@ import './friendsList.css'
 const FriendsList = (props) => {
    const  { friends } = props
   return (
-    <ul className='FriendsList'>
-      {friends.map(friend => <li key={friend.name}>{friend.name}</li>)}
-      </ul>
+    <div>
+      <h2>{friends.map(friend => {
+      return (
+        <h3>{friend.name}</h3>
+        )
+      })
+      }</h2>
+    </div>
   )
 };
 

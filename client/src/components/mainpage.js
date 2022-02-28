@@ -7,7 +7,7 @@ import Axios from 'axios'
 const Mainpage = () => {
     const [name, setName] = useState('')
     const [friends, setFriends] = useState([])
-    const [filteredFriends, setFilteredFriends] = useState([])
+   
     
     useEffect(() => {
         const fetchFriend = async () => {
@@ -17,28 +17,25 @@ const Mainpage = () => {
         }
         fetchFriend()
     }, []);
-
-    useEffect(() => {
-        setFilteredFriends(friends.filter((friend) => friend.name.toUpperCase().includes(name.toUpperCase())))
-    }, [name, friends])
+    const friendFilter = (friend) => friend.name.toUpperCase().includes(name.toUpperCase()) 
+    //useEffect(() => {
+    //    setFilteredFriends(friends.filter((friend) => friend.name.toUpperCase().includes(name.toUpperCase())))
+    //}, [name, friends])
 
    //const nameFilter= (friend) => friend.name.toLowerCase().includes(name.toLowerCase())
     return (
-        <div className='MainPage'>
-            <h1>Friends</h1>
-            <input type='text' onChange={(event) => setName(event.target.value)} />
-            <div>{filteredFriends.map(friend => {
-                return (
-                    <div>
-                        <h2> {friend.name}</h2>
-                    </div>
-                )
-            })
-            }
-            </div>
-
-        </div>
-    )
+      <div className="MainPage">
+        <h1>Friends</h1>
+        <FriendsSearch
+            name={name}
+            setName={setName}
+           />
+        <FriendsList
+        friends={friends.filter(friendFilter)}
+         />
+ 
+      </div>
+    );
 
 }
 
