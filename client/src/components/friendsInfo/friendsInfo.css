@@ -1,14 +1,27 @@
 .InfoPage{
-    background-color:blueviolet;
-    color: rgb(38, 211, 211);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: blueviolet;
+  min-height: 100vh;
+  text-align: center;
+  border: 15px double gold;
 }
 .InfoPageTitle{
     text-align: center;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
 }
 
 [name=piviot]{
-    color: rgb(10, 10, 10);
+    color: rgb(155, 143, 143);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+}
+
+.Role{
+    color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.FriendName{
+     color: rgb(240, 189, 62);
+     font-family: cursive;
+     letter-spacing: 2px;
 }
