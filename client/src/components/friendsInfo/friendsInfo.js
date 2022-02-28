@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import  Axios  from 'axios'
-
+import './friendsInfo.css'
 const FriendsInfo = (props) => {
     const [friend, setFriend] = useState({})
     const {friendName} = useParams()
@@ -15,14 +15,10 @@ const FriendsInfo = (props) => {
     }, [friendName])
     return (
         <div className='InfoPage'>
-            <h1>Friends Info</h1>
-            <h2>Information about the friends</h2>
-            <h3>Name: {friend.name}</h3>
-            <br />
-            <h3>Traits: {friend.trait}</h3>
-            <br />
-            <h3> Role in the seruies: {friend.characterGroup}</h3>
-            <NavLink to='/'>PIVIOT!</NavLink>
+            <h1 className='InfoPageTitle'><u>Friends Info</u></h1>
+            <h2>Information about <u>{friend.name}</u> </h2>
+            <h3> Role in the series: {friend.characterGroup}</h3>
+            <NavLink name='piviot' to='/'>PIVIOT!</NavLink>
             </div >
    ) 
 }

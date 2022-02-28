@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import FriendsSearch from './friendsSearch/friendsSearch'
-import FriendsList from './friendsList/friendsList'
+import FriendsSearch from '../friendsSearch/friendsSearch'
+import FriendsList from '../friendsList/friendsList'
 import Axios from 'axios'
-//import FriendsInfo from '../friendsInfo/friendsInfo'
+import './mainpage.css'
 
 const Mainpage = () => {
     const [name, setName] = useState('')

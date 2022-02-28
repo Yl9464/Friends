@@ -1,3 +1,16 @@
-FriendsList{
-    color: coral;
+.FriendsList{
+   font-family: monospace;
+}
+ [name = NameList]{
+     color: rgb(240, 189, 62);
+     font-size: larger;
+ }
+
+[name= FriendBullets]{
+    padding: 5px;
+}
+
+ul{
+    list-style-position: inside;
+    color: aliceblue;
 }

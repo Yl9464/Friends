@@ -1,4 +1,14 @@
-InfoPage{
-    background-color: black;
-    color: white;
+.InfoPage{
+    background-color:blueviolet;
+    color: rgb(38, 211, 211);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.InfoPageTitle{
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+[name=piviot]{
+    color: rgb(10, 10, 10);
 }

@@ -1,12 +1,12 @@
 import React from "react"
-//import './friendsList.css'
+import './friendsList.css'
 import { NavLink } from 'react-router-dom'
 
 const FriendsList = (props) => {
    const  { friends } = props
   return (
-    <ul>
-      {friends.map(friend => <li key={friend.name}><NavLink to={`/characters/${friend.name}`}>{friend.name}</NavLink></li>)}
+    <ul className="FriendsList">
+      {friends.map(friend => <li name='FriendBullets' key={friend.name}><NavLink name='NameList' to={`/characters/${friend.name}`}>{friend.name}</NavLink></li>)}
     </ul>
   )
 };
