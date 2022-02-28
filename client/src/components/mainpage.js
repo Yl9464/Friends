@@ -18,11 +18,7 @@ const Mainpage = () => {
         fetchFriend()
     }, []);
     const friendFilter = (friend) => friend.name.toUpperCase().includes(name.toUpperCase()) 
-    //useEffect(() => {
-    //    setFilteredFriends(friends.filter((friend) => friend.name.toUpperCase().includes(name.toUpperCase())))
-    //}, [name, friends])
 
-   //const nameFilter= (friend) => friend.name.toLowerCase().includes(name.toLowerCase())
     return (
       <div className="MainPage">
         <h1>Friends</h1>
