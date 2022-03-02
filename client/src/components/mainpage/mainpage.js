@@ -22,7 +22,7 @@ const Mainpage = () => {
 
     useEffect(() => {
         const fetchTopic = async () => {
-            let fetchedTopic = await Axios.get('http://localhost1341/api/debate')
+            let fetchedTopic = await Axios.get('http://localhost:1341/api/debate')
             
             setTopics(fetchedTopic.data)
         }
