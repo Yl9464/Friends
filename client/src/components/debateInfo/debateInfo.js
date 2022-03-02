@@ -5,20 +5,24 @@ import './debateInfo.css'
 
 const DebateInfo = () => {
     const [debate, setDebate] = useState({})
-    const { debateTopic } = useParams()
+    const { debateTopic } = useParams();
 
     useEffect(() => {
         const fetchTopic = async () => {
-            let {topicData} = await Axios.get(`http://localhost:1341/api/debate/${debateTopic}`)
+            let {data} = await Axios.get(`http://localhost:1341/api/debate/${debateTopic}`)
         
-            setDebate(topicData)
+            setDebate(data)
         }
         fetchTopic()
     }, [debateTopic])
     return (
         <div className="DebatePage">
-            <h1> Debate Opinions</h1>
-            <h2>{debate.topic}</h2>
+            <h1 className="Header"> <u>Debate</u> <u>Opinion</u></h1>
+            <h2 className="Topic">{debate.topic}</h2>
+            <div className="DebateBody"> 
+                <h2 className="Opinion"> <u>Yes or No</u> - {debate.opinion}</h2>
+                <h2> <u>The Reason:</u> {debate.reason} </h2>
+            </div>
             <NavLink name='piviot' to='/'>PIVIOT!</NavLink>
         </div>
        

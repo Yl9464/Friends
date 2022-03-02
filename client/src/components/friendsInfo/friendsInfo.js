@@ -5,6 +5,7 @@ import './friendsInfo.css'
 
 const FriendsInfo = () => {
     const [friend, setFriend] = useState({})
+    const [traits, setTraits] = useState([])
     const {friendName} = useParams()
 
     useEffect(() => {
@@ -14,11 +15,16 @@ const FriendsInfo = () => {
         }
         fetchFriend()
     }, [friendName])
+
     return (
         <div className='InfoPage'>
-            <h1 className='InfoPageTitle'><u>Friends Info</u></h1>
-            <h2 className='FriendName'>{friend.name}: </h2>
-            <h3 className='Role'> Role in the series: {friend.characterGroup}</h3>
+            <h1 className='InfoHeader'><u>Friends Info</u></h1>
+            <div className='InfoBody'>
+            <h3> <u>Meet Friend</u>... {friend.name}! </h3>
+            <h3> <u>Role in Series</u>: {friend.characterGroup}</h3>
+            <h3> <u> This Friend Tends To Be</u>...</h3>
+            </div>
+           
             <NavLink name='piviot' to='/'>PIVIOT!</NavLink>
             </div >
    ) 

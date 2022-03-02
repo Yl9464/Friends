@@ -14,4 +14,5 @@ padding: 5px
 ul{
     list-style-position: inside;
     color: aliceblue;
+   line-height: 185%; 
 }

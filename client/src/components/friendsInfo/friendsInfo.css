@@ -3,25 +3,17 @@
   min-height: 100vh;
   text-align: center;
   border: 15px double gold;
-}
-.InfoPageTitle{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
+  color:aliceblue
 }
 
+
 [name=piviot]{
-    color: rgb(155, 143, 143);
+    color: rgb(0, 0, 0);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 3px;
 }
 
 .Role{
-    color: aquamarine;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.FriendName{
-     color: rgb(240, 189, 62);
-     font-family: cursive;
-     letter-spacing: 2px;
+    color: rgb(255, 255, 255);
 }

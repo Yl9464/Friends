@@ -2,7 +2,7 @@ import React from 'react'
 import Mainpage from './components/mainpage/mainpage';
 import Error from './components/error/error'
 import FriendsInfo from './components/friendsInfo/friendsInfo';
-import DebateInfo from './components/debateInfo/debateInfo';
+import DebateInfo from './components/debateInfo/debateInfo'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/characters/:friendName" element={<FriendsInfo />} />
-          <Route pather="/debates/:debateTopic" element={<DebateInfo />} />
+          <Route path="/debates/:debateTopic" element={<DebateInfo />} />
           <Route path="/" element={<Mainpage />} />
           <Route path="*" element={<Error />} />
         </Routes>

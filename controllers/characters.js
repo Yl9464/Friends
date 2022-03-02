@@ -63,10 +63,25 @@ const savedCharacter = async (request, response) => {
     return response.status(500).send('Cannot save new character')
   }
 }
+const getTraitsAndTheirCharacter = async (request, response) => {
+  try {
+    const traits = await models.Traits.findAll({
+      attributes: ['trait'],
+      include: [{
+        model: models.Characters,
+        attributes: ['name']
+      }]
+    })
 
+    return response.send(traits)
+  } catch (error) {
+    return response.status(400).send('Cannot retrieve traits, try again...')
+  }
+}
 
 module.exports = {
   getAllRecords,
   getCharacterByName,
   savedCharacter,
+  getTraitsAndTheirCharacter,
 }
