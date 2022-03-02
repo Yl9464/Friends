@@ -38,9 +38,11 @@ const Mainpage = () => {
         <FriendsList
         friends={friends.filter(friendFilter)}
          />
-
-        <DebateList
-        debates={topics.filter(debateFilter)} />
+        <div className='DebateListings'>
+            <DebateList
+            debates={topics.filter(debateFilter)}
+                />
+         </div>
         
         </div>
     );
