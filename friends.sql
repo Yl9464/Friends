@@ -8,33 +8,13 @@ CREATE TABLE characters(
 id INT auto_increment,
 name VARCHAR(255),
 bestQuote VARCHAR(255),
-characterGroup ENUM ('Main group', 'Minor characters'),
+friendDescription MEDIUMTEXT,
 createdAt DATETIME DEFAULT NOW(),
 updatedAt DATETIME DEFAULT NOW(),
 deletedAt DATETIME,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE traits(
-id INT auto_increment,
-trait VARCHAR (255),
-createdAt DATETIME DEFAULT NOW(),
-updatedAt DATETIME DEFAULT NOW(),
-deletedAt DATETIME,
-PRIMARY KEY (id)
-);
-
-
-CREATE TABLE characterTraits(
-characterId INT,
-traitId INT,
-createdAt DATETIME DEFAULT NOW(),
-updatedAt DATETIME DEFAULT NOW(),
-deletedAt DATETIME,
-PRIMARY KEY (characterId, traitId),
-FOREIGN KEY(characterId) REFERENCES characters(id),
-FOREIGN KEY(traitId) REFERENCES traits(id)
-); 
 
 CREATE TABLE debatables(
 id INT auto_increment,
@@ -47,59 +27,16 @@ deletedAt DATETIME,
 PRIMARY KEY (id)
 );
 
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Rachel Green', 'No uterus, no opinion', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Monica Geller', 'Welcome to the real world. It sucks. You are gonna love it.', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Ross Geller', 'WE WERE ON A BREAK!', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Phoebe Buffay', 'They dont know that we know they know we know!', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Chandler Bing', 'Im hopeless and awkward and desperate for love!', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Joey Tribbiani', 'So why dont you be a grown-up and come and watch some TV in the fort?', 'Main Group');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Janice Hosenstein', 'Im riding the alimony pony!', 'Minor characters');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Mike Hanagan', 'I know this is gonna sound crazy but we could not let the box of rats ruin our lives.', 'Minor characters');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Gunther', 'Thanks for not marrying Rachel', 'Minor characters');
-INSERT INTO characters (name, bestQuote, characterGroup) VALUES('Ursala Buffay', 'Hurry up! I gotta pray!', 'Minor characters');
-
-INSERT INTO traits (trait) VALUES ('Caring');
-INSERT INTO traits (trait) VALUES ('Energetic');
-INSERT INTO traits (trait) VALUES ('Entitled');
-INSERT INTO traits (trait) VALUES ('Funny');
-INSERT INTO traits (trait) VALUES ('Jealous');
-INSERT INTO traits (trait) VALUES ('OCD');
-INSERT INTO traits (trait) VALUES ('Sad');
-INSERT INTO traits (trait) VALUES ('Sarcastic');
-INSERT INTO traits (trait) VALUES ('Narcissist');
-INSERT INTO traits (trait) VALUES ('Supportive');
-INSERT INTO traits (trait) VALUES ('Temperamental');
-
-INSERT INTO characterTraits(characterId, traitId) VALUES (1, 3);  
-INSERT INTO characterTraits(characterId, traitId) VALUES (1, 5);
-INSERT INTO characterTraits(characterId, traitId) VALUES (1, 9);
-INSERT INTO characterTraits(characterId, traitId) VALUES (2, 6);
-INSERT INTO characterTraits(characterId, traitId) VALUES (2, 9);
-INSERT INTO characterTraits(characterId, traitId) VALUES (2, 11);
-INSERT INTO characterTraits(characterId, traitId) VALUES (3, 1);
-INSERT INTO characterTraits(characterId, traitId) VALUES (3, 5);
-INSERT INTO characterTraits(characterId, traitId) VALUES (3, 11);
-INSERT INTO characterTraits(characterId, traitId) VALUES (4, 1);
-INSERT INTO characterTraits(characterId, traitId) VALUES (4, 4);
-INSERT INTO characterTraits(characterId, traitId) VALUES (4, 10);
-INSERT INTO characterTraits(characterId, traitId) VALUES (5, 4);
-INSERT INTO characterTraits(characterId, traitId) VALUES (5, 8);
-INSERT INTO characterTraits(characterId, traitId) VALUES (5, 10);
-INSERT INTO characterTraits(characterId, traitId) VALUES (6, 1);
-INSERT INTO characterTraits(characterId, traitId) VALUES (6, 4);
-INSERT INTO characterTraits(characterId, traitId) VALUES (6, 10);
-INSERT INTO characterTraits(characterId, traitId) VALUES (7, 1);
-INSERT INTO characterTraits(characterId, traitId) VALUES (7, 2);
-INSERT INTO characterTraits(characterId, traitId) VALUES (7, 4);
-INSERT INTO characterTraits(characterId, traitId) VALUES (8, 4);
-INSERT INTO characterTraits(characterId, traitId) VALUES (8, 8);
-INSERT INTO characterTraits(characterId, traitId) VALUES (8, 10);
-INSERT INTO characterTraits(characterId, traitId) VALUES (9, 5);
-INSERT INTO characterTraits(characterId, traitId) VALUES (9, 7);
-INSERT INTO characterTraits(characterId, traitId) VALUES (9, 11);
-INSERT INTO characterTraits(characterId, traitId) VALUES (10, 3);
-INSERT INTO characterTraits(characterId, traitId) VALUES (10, 9);
-INSERT INTO characterTraits(characterId, traitId) VALUES (10, 11);
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Rachel Green', 'No uterus, no opinion', 'Main Group', 'Rachel is the worst Friend in the group. With realtionships she acts like a toddler, not interested in soemthing until someone else is. I hate Rachel, but love Jennifer Aniston.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Monica Geller', 'Welcome to the real world. It sucks. You are gonna love it.', 'Main Group', 'Monica is very OCD and controlling. Given her family dynamic its understandable and I feel bad for her. She is caring and giving and is an overall good person.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Ross Geller', 'WE WERE ON A BREAK!', 'Main Group', 'Ross made some stupid decisions in the series, but overall was a decent guy. He was a dependable person and does not deserve all the hate his character gets.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Phoebe Buffay', 'They dont know that we know they know we know!', 'Main Group', 'I love Phoebe as a character but would hate her as a person IRL. I admire her confidence and strength, but her flakyness and attitude would anger me in person.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Chandler Bing', 'Im hopeless and awkward and desperate for love!', 'Main Group', 'If Chandler was a real person I would have such a big crush on him! He is funny, sarcastic, and mostly dependable. Hes the total package!' );
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Joey Tribbiani', 'So why dont you be a grown-up and come and watch some TV in the fort?', 'Main Group', 'Joey can be a jerk to women at times, but his over all loyalty to the group is admirable. His character got a crap ending, he should have found love and had a nice future implied like everyone else did.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Janice Hosenstein', 'Im riding the alimony pony!', 'Minor characters', 'Janice is a good person. I feel bad for how the Friends treated her, she deserved much better from the group. I am glad she found someone she loved and who loved her in the end.' );
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Mike Hanagan', 'I know this is gonna sound crazy but we could not let the box of rats ruin our lives.', 'Minor characters', 'I love Mike, but only because I want to marry Paul Rudd!');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Gunther', 'Thanks for not marrying Rachel', 'Minor characters', 'Gunther is pretty meeeeeh... his crush on Rachel was weird and obsessive at times. Not sure where I stand on him. It was sad when the actor passed away a bit a go, he seemed nice.');
+INSERT INTO characters (name, bestQuote, friendDescription) VALUES('Ursala Buffay', 'Hurry up! I gotta pray!', 'Minor characters', 'Ursala is a real jerk, but if I grew up with her childhood I would probably be the same way or worse...');
 
 INSERT INTO debatables(topic, opinion, reason) VALUES ('Were Ross and Rachel on a break?', 'Yes', 'Rachel wanted a break becuase Ross was jealous and controlling. She had a good reason to call a break and Ross made a bad move sleeping someone right off the bat. However he had the prerogative to do so since, THEY WERE ON A BREAK!');
 INSERT INTO debatables(topic, opinion, reason) VALUES ('Should Joey and Phoebe have dated?', 'No', 'They had a good dynamic that would have been ruined if they dated and broke up.');

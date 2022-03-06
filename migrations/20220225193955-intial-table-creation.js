@@ -12,21 +12,7 @@ module.exports = {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       name: { type: Sequelize.STRING },
       bestQuote: { type: Sequelize.STRING },
-      characterGroup: { type: Sequelize.ENUM('Main group', 'Minor characters') },
-      createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW()') },
-      updatedAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW() ON UPDATE NOW()') },
-      deletedAt: { type: Sequelize.DATE }
-    })
-    await queryInterface.createTable('traits', {
-      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-      trait: { type: Sequelize.STRING },
-      createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW()') },
-      updatedAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW() ON UPDATE NOW()') },
-      deletedAt: { type: Sequelize.DATE }
-    })
-    await queryInterface.createTable('characterTraits', {
-      characterId: { type: Sequelize.INTEGER, primaryKey: true, reference: { model: 'characters', key: 'id' } },
-      traitId: { type: Sequelize.STRING, primaryKey: true, reference: { model: 'traits', key: 'id' } },
+      friendDescription: { type: Sequelize.STRING },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW()') },
       updatedAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('NOW() ON UPDATE NOW()') },
       deletedAt: { type: Sequelize.DATE }
@@ -50,6 +36,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    return queryInterface.dropTable('characters', 'traits', 'characterTraits', 'debatables')
+    return queryInterface.dropTable('characters', 'debatables')
   }
 }

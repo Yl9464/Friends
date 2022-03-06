@@ -41,8 +41,8 @@ const Mainpage = () => {
             <DebateList
             debates={topics.filter(debateFilter)}
                 />
-         </div>
-        
+            </div>
+     
         </div>
     );
 

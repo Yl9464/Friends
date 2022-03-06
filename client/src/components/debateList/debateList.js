@@ -7,7 +7,7 @@ const DebateList = (props) => {
     
     return ( 
         <div> 
-        <h1>Selecte a Debatable Topic for my opion:</h1>
+        <h2>Selecte a Debatable Topic for my opion:</h2>
         <ul className='TopicList'>
             {debates.map(debate => <li name='TopicBullets' key={debate.topic}><NavLink name='TopicList' to={`/debates/${debate.topic}`}>{debate.topic}</NavLink></li> )}
         </ul>

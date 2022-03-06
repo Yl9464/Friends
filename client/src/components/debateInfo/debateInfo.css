@@ -12,13 +12,20 @@
 }
 
 .Topic{
-    color: rgb(102, 222, 238);
+    color: rgb(68, 211, 230);
     font-weight: bolder;
    
 }
 
 .DebateBody{
-    color: aliceblue;
-    text-align: left;
-    margin-left: 10px;
+  text-align: left;
+  margin-left: 90px;
+  color: rgb(255, 255, 255);
+}
+
+[name=piviot]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    color: coral;
 }
