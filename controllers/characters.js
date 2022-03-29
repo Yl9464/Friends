@@ -5,13 +5,7 @@ const models = require('../models')
 const getAllRecords = async (request, response) => {
   try {
     const characters = await models.Characters.findAll({
-      attributes: ['name', 'bestQuote', 'characterGroup'],
-      include: [
-        {
-          model: models.Traits,
-          attributes: ['trait']
-        },
-      ],
+      attributes: ['name', 'bestQuote', 'friendDescription'],
     })
 
     return response.send(characters)
@@ -27,13 +21,7 @@ const getCharacterByName = async (request, response) => {
 
     const characterName = await models.Characters.findOne({
       where: { name: { [models.Op.like]: `%${name}%` } },
-      attributes: ['name', 'characterGroup'],
-      include: [
-        {
-          model: models.Traits,
-          attributes: ['trait'],
-        },
-      ],
+      attributes: ['name', 'bestQuote', 'friendDescription'],
     })
 
     return characterName
@@ -46,16 +34,14 @@ const getCharacterByName = async (request, response) => {
 
 const savedCharacter = async (request, response) => {
   try {
-    const {
-      name, bestQuote, characterGroup
-    } = request.body
+    const { name, bestQuote, friendDescription } = request.body
 
-    if (!name || !bestQuote || !characterGroup) {
+    if (!name || !bestQuote || !friendDescription) {
       return response.status(400).send('Missing field')
     }
 
     const newCharacter = await models.Characters.create({
-      name, bestQuote, characterGroup,
+      name, bestQuote, friendDescription,
     })
 
     return response.status(200).send(newCharacter)

@@ -1,0 +1,18 @@
+.TopicList{
+   font-family: monospace;
+}
+
+[name=TopicList]{
+     color: rgb(240, 189, 62);
+     font-size: larger;
+}
+
+[name=TopicBulltes]{
+padding: 5px
+}
+
+ul{
+    list-style-position: inside;
+    color: aliceblue;
+   line-height: 185%; 
+}
