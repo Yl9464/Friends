@@ -4,7 +4,7 @@ const DebatablesModel = require('./debatables')
 
 const allConfigs = require('../configs/sequelize')
 
-const environment = process.env.NOVE_ENV || 'development'
+const environment = process.env.NODE_ENV || 'development'
 const config = allConfigs[environment]
 
 const connection = new Sequelize(config.database, config.username, config.password, {
