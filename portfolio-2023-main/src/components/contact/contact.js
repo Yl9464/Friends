@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faHouse, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Resume from '../../images/resume.pdf'
 import './contact.css'
 
 const Contact = () => {
