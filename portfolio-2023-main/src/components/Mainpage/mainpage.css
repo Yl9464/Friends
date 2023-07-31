@@ -1,0 +1,19 @@
+.mainpage {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.myimg{
+    position: absolute;
+    background-color: #455b22;
+    width: 12%;
+    height: 25%;
+    margin-top: 23%;
+    border-radius: 50%;
+    left: 48%;
+}
+

@@ -1,0 +1,34 @@
+.aboutPage{
+    /* border: 1px solid black; */
+    width: 50%;
+    width: 55%;
+    padding-right: 20px;
+    margin-top: 125px;
+    margin-left: 60px;
+    text-align: justify;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aboutHead {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.aboutText{
+    line-height: 2;
+    font-size: 20px;
+    margin: 0;
+    width: 124%;
+}
+.lookingFor {
+    margin-top: 30px;
+    width: 80%;
+}
