@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import FriendsList from '../friendsList/friendsList'
 import DebateList from '../debateList/debateList'
-import './mainpage.css'
+//import './mainpage.css'
 import Axios from 'axios'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Mainpage = () => {
     const [name] = useState('')
