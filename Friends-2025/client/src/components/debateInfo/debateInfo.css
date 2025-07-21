@@ -1,0 +1,31 @@
+.DebatePage{
+    background-color: blueviolet;
+    min-height: 100vh;
+    text-align: center;
+    border: 15px double gold;
+    font-family: monospace;
+}
+
+.Header{
+    color: aliceblue;
+    
+}
+
+.Topic{
+    color: rgb(68, 211, 230);
+    font-weight: bolder;
+   
+}
+
+.DebateBody{
+  text-align: left;
+  margin-left: 90px;
+  color: rgb(255, 255, 255);
+}
+
+[name=piviot]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    color: coral;
+}

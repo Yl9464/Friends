@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.MainPage{
+  background-color: blueviolet;
+  min-height: 100vh;
+  text-align: center;
+  border: 15px double gold;
+  color: aliceblue;
+  font-family: monospace;
+}
