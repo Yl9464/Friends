@@ -1,0 +1,29 @@
+.InfoPage{
+  background-color: blueviolet;
+  min-height: 100vh;
+  text-align: left;
+  border: 15px double gold;
+  font-family: monospace;
+  color:aliceblue
+}
+
+.InfoHeader{
+  text-align: center;
+}
+.InfoBody{
+  text-align: left;
+  margin-left: 90px;
+  color: rgb(255, 255, 255);
+}
+
+.Footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+[name=Back]{
+  color: coral;
+}
+
+
