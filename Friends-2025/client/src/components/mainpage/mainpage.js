@@ -36,7 +36,6 @@ const Mainpage = () => {
       <div className="MainPage">
         <title>Friends</title>
         <FriendsList
-        
                 friends={friends.filter(friendFilter)}
          />
         <div className='DebateListings'>

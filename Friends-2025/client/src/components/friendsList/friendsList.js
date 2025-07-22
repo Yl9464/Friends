@@ -1,7 +1,8 @@
 import React from "react"
 import './friendsList.css'
 import { NavLink } from 'react-router-dom'
-import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 import DebateList from "../debateList/debateList";
 
 const FriendsList = (props) => {
@@ -9,12 +10,23 @@ const FriendsList = (props) => {
   return (
      <div> 
       {friends.map(friend => 
-        <Card style={{ width: '18rem' }}>
+      <Container>
+        <Row>
+          <Col className="p-2 mx-auto">
+          <Card>
           <Card.Body> 
-            <Card.Title>The one about... </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{friend.name} </Card.Subtitle>
+            <Card.Title>The one about... {friend.name} </Card.Title>
+        
+             <Card.Text>
+              Click on links below to see a characters profile and my opinions on their controversial moments
+              </Card.Text> 
+              <Card.Link href={`/characters/${friend.name}`}>Profile</Card.Link>  
           </Card.Body>
-    </Card>
+          </Card>
+          </Col>
+       </Row>
+    </Container>
+        
       )}
     </div>
   );
