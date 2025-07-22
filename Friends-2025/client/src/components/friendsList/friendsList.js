@@ -6,28 +6,22 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 import DebateList from "../debateList/debateList";
 
 const FriendsList = (props) => {
-   const  { friends } = props
+   const  { friends, debates } = props
   return (
      <div> 
       {friends.map(friend => 
-      <Container>
-        <Row>
-          <Col className="p-2 mx-auto">
-          <Card>
-          <Card.Body> 
-            <Card.Title>The one about... {friend.name} </Card.Title>
-        
-             <Card.Text>
-              Click on links below to see a characters profile and my opinions on their controversial moments
-              </Card.Text> 
-              <Card.Link href={`/characters/${friend.name}`}>Profile</Card.Link>  
-          </Card.Body>
-          </Card>
-          </Col>
-       </Row>
-    </Container>
-        
-      )}
+      <Card className="mb-4">
+            <Card.Body > 
+       <Card.Title>The one about... {friend.name} </Card.Title>
+       <Card.Text>
+          Click on links below to see a characters profile and my opinions on their controversial moments
+        </Card.Text> 
+        <Card.Link href={`/characters/${friend.name}`}>Profile</Card.Link> 
+         {debates.map(debate => <li name='TopicBullets' key={debate.topic}><NavLink name='TopicList' to={`/debates/${debate.topic}`}>{debate.topic}</NavLink></li> )}
+          <Card.Link href={`/debates/${debates.topic}`}>Hot Topic</Card.Link> 
+       </Card.Body>
+        </Card>
+         )}
     </div>
   );
 }

@@ -3,6 +3,8 @@ import FriendsList from '../friendsList/friendsList'
 import DebateList from '../debateList/debateList'
 import './mainpage.css'
 import Axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
 
 const Mainpage = () => {
@@ -34,15 +36,23 @@ const Mainpage = () => {
     const debateFilter = (debate) => debate.topic.toUpperCase().includes(topic.toUpperCase())
     return (
       <div className="MainPage">
-        <title>Friends</title>
-        <FriendsList
-                friends={friends.filter(friendFilter)}
-         />
-        <div className='DebateListings'>
+        <h1>Friends</h1>
+        <Container>
+        <Row>
+        <Col className="p-5">
+         <FriendsList
+         friends={friends.filter(friendFilter)}
+         debates={topics.filter(debateFilter)}   
+            />
+        </Col>
+        </Row>
+        </Container>
+       
+        {/* <div className='DebateListings'>
             <DebateList
             debates={topics.filter(debateFilter)}
                 />
-            </div>
+            </div> */}
      
         </div>
     );

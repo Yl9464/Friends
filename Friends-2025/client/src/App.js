@@ -13,15 +13,7 @@ function App() {
   return (
     
     <div className ="App">
-      {/* <header className='App-header'>
-        <Card variant="flat" border="header" className='mb-5' style={{color: "khaki"}}>
-        <Card.Body>
-          <Card.Title>Hello</Card.Title>
-          <Card.Text>Friends app coming soon...</Card.Text>
-        </Card.Body>
-      </Card>
-
-      </header> */}
+    
       <BrowserRouter>
         <Routes>
           <Route path="/characters/:friendName" element={<FriendsInfo />} />
