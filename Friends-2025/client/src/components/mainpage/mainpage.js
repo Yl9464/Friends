@@ -36,19 +36,20 @@ const Mainpage = () => {
     const debateFilter = (debate) => debate.topic.toUpperCase().includes(topic.toUpperCase())
     return (
       <div className="MainPage">
-        <Container>
+        <Container className='p-5'>
         <Row>
-            <Col className="p-5">
+            <Col>
             <FriendsList
             friends={friends.filter(friendFilter)}
             />
             </Col>
-        <Col>
+            </Row>
+            <Row>
+              <Col >
              <DebateList
-                debates={topics.filter(debateFilter)}
-                    />
-            </Col>
-        </Row>
+                debates={topics.filter(debateFilter)}      />
+            </Col>   
+            </Row>
         </Container>
        
         {/* <div className='DebateListings'>

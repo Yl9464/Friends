@@ -9,9 +9,9 @@ const DebateList = (props) => {
     const { debates } = props
     return ( 
       <div> 
-      <h1>Lets Debate</h1>
+      <h1 className="DebateHead">Lets Debate</h1>
         {debates.map(debate =>
-        <Card className="mb-4">
+            <Card border="black" className="mb-4 p-0">
             <Card.Body>
             <Card.Title>Click on topic to see my take on show controverses </Card.Title>
             <Card.Link href={`/debates/${debate.topic}`}>{debate.topic}</Card.Link> 

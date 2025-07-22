@@ -5,9 +5,6 @@ import Error from './components/error/error'
 import FriendsInfo from './components/friendsInfo/friendsInfo';
 import DebateInfo from './components/debateInfo/debateInfo'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Row, Col, Button, Card, Form } from 'react-bootstrap'
-
 
 function App() {
   return (
