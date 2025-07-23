@@ -1,0 +1,12 @@
+.red-dot{
+    font-size: 50px;
+    color: red;
+}
+.blue-dot{
+        font-size: 50px;
+    color: rgb(10, 102, 194);
+}
+.yellow-dot{
+        font-size: 50px;
+    color: rgba(255, 153, 0, 0.804);
+}
