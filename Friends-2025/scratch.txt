@@ -1,0 +1,22 @@
+import React from 'react';
+import { Image } from 'react-bootstrap';
+
+function ImageRenderer({ imageLoaded, errorLoading }) {
+  let content;
+
+  if (imageLoaded) {
+    content = <Image src="path/to/successful/image.jpg" alt="Loaded Image" fluid />;
+  } else if (errorLoading) {
+    content = <p>Error loading image. Please try again.</p>;
+  } else {
+    content = <p>Loading image...</p>;
+  }
+
+  return (
+    <div>
+      {content}
+    </div>
+  );
+}
+
+export default ImageRenderer;

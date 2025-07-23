@@ -4,6 +4,7 @@
   min-height: 100vh;
   text-align: center;
   border: 15px double gold;
+  background-color: hsl(271, 76%, 53%);
   font-family:  "Caveat", cursive;
 }
 
