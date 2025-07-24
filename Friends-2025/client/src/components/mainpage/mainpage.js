@@ -5,7 +5,8 @@ import './mainpage.css'
 import Axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './header.js'
-import { Container, CardGroup, CardLink, CardImg, CardBody, CardTitle, CardSubtitle, Card } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
+import Frame from '../images/frame.jpg'
 
 const Mainpage = () => {
     const [name] = useState('')
@@ -39,8 +40,11 @@ const Mainpage = () => {
     
     return (
       <div className="MainPage">
+        
         <Header />
-       <FriendsList friends={friends.filter(friendFilter)} />
+       <FriendsList friends={friends.filter(friendFilter)} /> 
+
+        
         </div>
     );
 

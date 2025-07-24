@@ -5,12 +5,12 @@ import Error from './components/error/error'
 import FriendsInfo from './components/friendsInfo/friendsInfo';
 import DebateInfo from './components/debateInfo/debateInfo'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     
-    <div className ="App">
-    
+    <div className ="App" >
       <BrowserRouter>
         <Routes>
           <Route path="/characters/:friendName" element={<FriendsInfo />} />

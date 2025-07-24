@@ -1,7 +1,7 @@
 import React from "react"
 import './friendsList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Section, CardGroup, Col, Row, CardLink, CardImg, CardBody, CardTitle, CardSubtitle, Card, Container } from 'react-bootstrap'
+import { Col, Row, CardLink, CardBody, CardTitle, Card, Container } from 'react-bootstrap'
 import friendsImg from "../images/friendsImg.jpg"
 
 const FriendsList = (props) => {
