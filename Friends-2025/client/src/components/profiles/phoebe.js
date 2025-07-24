@@ -3,10 +3,10 @@ import { Col, Row, Image, Container } from 'react-bootstrap'
 import { NavLink, useParams } from 'react-router-dom'
 import  Axios  from 'axios'
 import React, { useState, useEffect } from 'react'
-import "./monica.css"
-import MonicaImg from '../images/monica.jpg'
+import "./phoebe.css"
+import PhoebeImg from '../images/phoebe.jpg'
 
-const Monica = () =>{
+const Phoebe = () =>{
     const [friend, setFriend] = useState({})
     const { friendName } = useParams()
 
@@ -23,8 +23,8 @@ const Monica = () =>{
         <Container>
             <Row>
                 <Col>
-                <Image className='monImg' src={MonicaImg} roundedCircle/>
-                <h2> Monicall Geller</h2>
+                <Image className='phoeImg' src={PhoebeImg} roundedCircle/>
+                <h2> Phoebe Buffay</h2>
                 </Col>
                 <Col>
                 <h1>Best Quote: "{friend.bestQuote}" </h1> 
@@ -40,4 +40,4 @@ const Monica = () =>{
          </Container>
     )
 }
-export default Monica
+export default Phoebe
