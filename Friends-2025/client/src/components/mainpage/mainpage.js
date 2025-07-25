@@ -14,7 +14,8 @@ const Mainpage = () => {
     const [topic] = useState('')
     const [topics, setTopics] = useState([])
 
-
+//useState: declare a default state variable and a function to update that variable,
+//useEffect: fetch data in components
     useEffect(() => {
         const fetchFriend = async () => {
             let fetchedFriend = await Axios.get('http://localhost:1341/api/characters')
