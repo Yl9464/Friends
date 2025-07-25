@@ -5,11 +5,13 @@ import './friendsInfo.css'
 import Rachel from '../profiles/rachel'
 import Monica from '../profiles/monica'
 import Phoebe from '../profiles/phoebe'
+import Ross from '../profiles/ross'
 import Mainpage from '../mainpage/mainpage'
+import Joey from '../profiles/joey'
+import Chandler from '../profiles/chandler'
 
 const FriendsInfo = () => {
     const [friend, setFriend] = useState({})
-    const [page, setPage] = useState()
     const { friendName } = useParams()
 
     useEffect(() => {
@@ -29,7 +31,15 @@ const FriendsInfo = () => {
          return(<Phoebe /> )
      } 
      
-
+  if(friendName ==='Ross Geller'){
+         return(<Ross /> )
+     } 
+       if(friendName ==='Joey Tribbiani'){
+         return(<Joey /> )
+     } 
+       if(friendName ==='Chandler Bing'){
+         return(<Chandler /> )
+     } 
 
    
 }
