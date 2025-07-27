@@ -43,6 +43,7 @@ const Mainpage = () => {
       <div className="MainPage">
         
         <Header />
+        {/* render cards */}
        <FriendsList friends={friends.filter(friendFilter)} /> 
 
         

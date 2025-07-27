@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import  Axios  from 'axios'
 import './friendsInfo.css'
 import Rachel from '../profiles/rachel'
 import Monica from '../profiles/monica'
 import Phoebe from '../profiles/phoebe'
 import Ross from '../profiles/ross'
-import Mainpage from '../mainpage/mainpage'
 import Joey from '../profiles/joey'
 import Chandler from '../profiles/chandler'
 
 const FriendsInfo = () => {
     const [friend, setFriend] = useState({})
-    const { friendName } = useParams()
+    const { friendName } = useParams() //extract friend name from url
 
     useEffect(() => {
         const fetchFriend = async () => {
