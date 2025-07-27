@@ -1,0 +1,25 @@
+.InfoPage{
+  text-align: left;
+  color:aliceblue
+}
+
+.InfoHeader{
+  text-align: center;
+}
+.InfoBody{
+  text-align: left;
+  margin-left: 90px;
+  color: rgb(255, 255, 255);
+}
+
+.Footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+[name=Back]{
+  color: coral;
+}
+
+
