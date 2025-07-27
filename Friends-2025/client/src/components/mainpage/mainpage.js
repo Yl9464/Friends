@@ -6,7 +6,7 @@ import Axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './header.js'
 import { Image } from 'react-bootstrap'
-import Frame from '../images/frame.jpg'
+import Frame from '../../images/frame.jpg'
 
 const Mainpage = () => {
     const [name] = useState('')

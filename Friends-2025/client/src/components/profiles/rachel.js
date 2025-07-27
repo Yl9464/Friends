@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Col, Row, Image,CardLink, CardBody, CardTitle, Card, Container } from 'react-bootstrap'
-import RachelImg from "../images/rachel.jpg"
+import RachelImg from "../../images/rachel.jpg"
 import { NavLink, useParams } from 'react-router-dom'
 import  Axios  from 'axios'
 import React, { useState, useEffect } from 'react'

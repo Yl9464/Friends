@@ -4,7 +4,7 @@ import { NavLink, useParams } from 'react-router-dom'
 import  Axios  from 'axios'
 import React, { useState, useEffect } from 'react'
 import "./ross.css"
-import RossImg from '../images/ross.jpg'
+import RossImg from '../../images/ross.jpg'
 
 const Ross = () =>{
     const [friend, setFriend] = useState({})

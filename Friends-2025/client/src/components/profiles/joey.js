@@ -4,7 +4,8 @@ import { NavLink, useParams } from 'react-router-dom'
 import  Axios  from 'axios'
 import React, { useState, useEffect } from 'react'
 import "./joey.css"
-import JoeyImg from '../images/joey.jpg'
+import joey from '../../images/joey.jpg'
+
 
 const Joey = () =>{
     const [friend, setFriend] = useState({})
@@ -23,7 +24,7 @@ const Joey = () =>{
         <Container>
             <Row>
                 <Col>
-                <Image className='phoeImg' src={JoeyImg} roundedCircle/>
+                <Image className='phoeImg' src={joey} roundedCircle/>
                 <h2> Joey Tribbiani</h2>
                 </Col>
                 <Col>
